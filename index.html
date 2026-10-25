@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="gambar/yo2.png" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">Farel Eka</div>
+    <i class="fa-solid fa-bars menu-icon" id="menu-icon" aria-label="Menu navigasi"></i>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="home" id="home">
+    <div class="home-img">
+      <img src="gambar/sleep.jpg" alt="Foto profil Koichi Farel Eka" />
+    </div>
+
+    <div class="home-content">
+      <h3>Halo Semuanya</h3>
+      <h1>Saya Koichi</h1>
+      <p>
+        Dikenal sebagai Muhammad farel eka saputra, Saat ini saya sedang berkuliah di Institut Teknologi Adhi Tama
+        Surabaya,
+        saya memiliki hobi bermain game tactical shooter dan saat ini saya sedang mendalami machine learning dan
+        artificial intelligence.
+        salam kenal semuanya.
+      </p>
+
+      <div class="home-btn">
+        <a href="#about">About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="about" id="about">
+    <div class="about-title">
+      <h1>About Me</h1>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="gambar/rust.png" alt="" />
+      </div>
+      <div class="about-content">
+        <h1><i class="fa-solid fa-layer-group"></i> rust language programming enthusiast</h1>
+        <p>
+          Saya sedang mendalami bahasa pemrograman rust, saya tertarik karena memory managemennya yang sangat kuat
+        </p>
+      </div>
+    </div>
+
+    <div class="about-grid reverse">
+      <div class="about-image">
+        <img src="gambar/backend.jpg" alt="" />
+      </div>
+      <div class="about-content">
+        <h1><i class="fa-solid fa-database"></i> Back End Developer</h1>
+        <p>
+          Saya sebagai Back End Developer pemula. Pada bidang ini saya suka
+          membuat sever dan membuat database
+        </p>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="gambar/devops.jpg" alt="" />
+      </div>
+      <div class="about-content">
+        <h1><i class="fa-solid fa-code"></i> DevOps Enggineer</h1>
+        <p>
+          Saya sedang mempelajari untuk membuat atau memodifikasi sebuah server,
+          dan juga saya sangat menyukai memodifikasi sebuah software hingga sistem operasi
+          seperti linux
+        </p>
+      </div>
+    </div>
+
+    <div class="about-grid reverse">
+      <div class="about-image">
+        <img src="gambar/machine_learning.jpg" alt="" />
+      </div>
+      <div class="about-content">
+        <h1><i class="fa-solid fa-database"></i> Machine Learning</h1>
+        <p>
+          Di era pemrograman zaman sekarang, Ai sedang marak maraknya,
+          saya berfikir, kenapa tidak membuat ai sendiri dari awal dengan metode Transformer
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project" id="project">
+    <div class="project-title">
+      <h1>My Project</h1>
+    </div>
+
+    <div class="project-grid">
+
+      <a href="" class="project-card">
+        <div class="project-image">
+          <img src="gambar/iced.png" alt="" />
+        </div>
+        <div class="project-content">
+          <h3>Chat box</h3>
+          <p>Chatbox menggunakan teknologi LLM dan Ollama berbasis bahasa pemrograman rust </p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Form (Spesifikasi Wajib Praktikum) -->
+  <section class="contact" id="contact">
+    <div class="contact-title">
+      <h1>Contact Me</h1>
+      <p>Tertarik berdiskusi atau berkolaborasi? Kirimkan pesan melalui formulir di bawah ini.</p>
+    </div>
+
+    <form class="contact-form" action="#" method="post">
+      <div class="form-group">
+        <label for="name" class="form-label">Nama Lengkap</label>
+        <input type="text" id="name" name="name" class="form-input" placeholder="Masukkan nama Anda" required
+          minlength="3" />
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Alamat Email</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="contoh@email.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message" class="form-label">Pesan</label>
+        <textarea id="message" name="message" class="form-textarea" rows="5"
+          placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-submit">Kirim Pesan</button>
+        <a href="https://wa.me/6281332905446" target="_blank" rel="noopener noreferrer" class="btn-wa">
+          <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+        </a>
+      </div>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Farel Eka as Koichi</p>
+  </footer>
+</body>
+
+</html>
