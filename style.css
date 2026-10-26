@@ -36,12 +36,10 @@
   --space-xl: 4rem;
   /* 64px */
 
-  /* Radius & Bayangan */
+  /* Radius Lengkungan */
   --radius-sm: 0.5rem;
   --radius-md: 1.25rem;
   --radius-full: 9999px;
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.35);
 }
 
 /* ==========================================================================
@@ -75,7 +73,6 @@ body {
   color: var(--text-main);
   font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   line-height: 1.65;
-  padding-top: 5rem;
 }
 
 button,
@@ -87,35 +84,34 @@ select {
 }
 
 /* ==========================================================================
-   3. SELEKTOR KHUSUS DENGAN KOMENTAR (MINIMAL 6 JENIS)
+   3. SELEKTOR KHUSUS DENGAN KOMENTAR (MINIMAL 6 JENIS SESUAI SPESIFIKASI)
    ========================================================================== */
 
 /* [SELEKTOR 1]: Class Selector */
 .project-card {
   width: 100%;
   max-width: 680px;
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
+  background: rgba(17, 27, 46, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: var(--radius-md);
-  border: var(--glass-border);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  padding: 1.75rem;
   color: var(--text-main);
   display: block;
-  text-decoration: none;
 }
 
 /* [SELEKTOR 2]: Child / Descendant Selector (Turunan / Anak) */
-.navbar ul>li>a {
-  display: block;
-  padding: var(--space-xs) var(--space-sm);
-  color: var(--text-main);
+.home-btn>a {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--primary);
+  border-radius: var(--radius-full);
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.25s ease, transform 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 /* [SELEKTOR 3]: Attribute Selector (Selektor Atribut) */
@@ -128,12 +124,12 @@ input[type="email"] {
   border-radius: var(--radius-sm);
   color: var(--text-main);
   font-size: 1rem;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease;
 }
 
 /* [SELEKTOR 4]: Pseudo-class Selector */
-.navbar ul>li>a:hover {
-  color: var(--primary);
+.home-btn>a:hover {
+  background: #2563eb;
   transform: translateY(-2px);
 }
 
@@ -151,7 +147,7 @@ input[type="email"] {
 
 /* [SELEKTOR 6]: Pseudo-class :nth-child & :not */
 .about-grid:nth-child(even) {
-  flex-direction: row-reverse;
+  border-color: rgba(59, 130, 246, 0.25);
 }
 
 .btn-submit:not(:disabled) {
@@ -170,46 +166,8 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
-   5. NAVBAR & HEADER (Glassmorphism & Specificity Datar Tanpa ID)
+   5. GENERAL SECTIONS & TIPOGRAFI
    ========================================================================== */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 8%;
-  background: rgba(11, 18, 32, 0.85);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border-bottom: var(--glass-border);
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--text-main);
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-}
-
-.menu-icon {
-  font-size: 1.8rem;
-  color: var(--text-main);
-  display: none;
-  cursor: pointer;
-}
-
-/* ==================== GENERAL SECTIONS & TIPOGRAFI ==================== */
 section {
   padding: var(--space-xl) 8%;
 }
@@ -224,7 +182,7 @@ p {
 
 /* ==================== HOME / HERO ==================== */
 .home {
-  min-height: calc(100vh - 5rem);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -242,7 +200,6 @@ p {
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-full);
   object-fit: cover;
-  box-shadow: var(--shadow-glow);
   display: block;
 }
 
@@ -275,26 +232,11 @@ p {
 }
 
 .home-btn {
-  margin-top: var(--space-md);
-}
-
-.home-btn a {
-  display: inline-block;
-  padding: 0.85rem 2.75rem;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: var(--primary);
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
-  transition: 0.3s ease;
-}
-
-.home-btn a:hover {
-  background: #2563eb;
-  transform: translateY(-3px);
-  box-shadow: 0 18px 40px rgba(59, 130, 246, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
 }
 
 /* ==================== ABOUT ME (Lebar Samping & Glass Card) ==================== */
@@ -330,7 +272,6 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .about-image {
@@ -345,7 +286,6 @@ p {
   max-width: 520px;
   height: auto;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft);
   border: var(--glass-border);
   object-fit: cover;
   display: block;
@@ -377,18 +317,13 @@ p {
   padding: 0 var(--space-xs);
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-glow);
-  border-color: rgba(59, 130, 246, 0.4);
-}
-
 .project-image img {
   width: 100%;
   height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   object-fit: contain;
   display: block;
-  border-bottom: var(--glass-border);
 }
 
 .project-content {
@@ -419,7 +354,6 @@ p {
   -webkit-backdrop-filter: var(--glass-blur);
   padding: var(--space-lg);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft);
   border: var(--glass-border);
 }
 
@@ -445,7 +379,7 @@ p {
   font-size: 1rem;
   resize: vertical;
   min-height: 120px;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease;
 }
 
 /* Gaya Keadaan :invalid (Spesifikasi Praktikum) */
@@ -471,13 +405,7 @@ p {
   background: var(--primary);
   border-radius: var(--radius-full);
   border: none;
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
   transition: background-color 0.25s ease, transform 0.25s ease;
-}
-
-.btn-submit:hover {
-  background-color: #2563eb;
-  transform: translateY(-2px);
 }
 
 .btn-wa {
@@ -493,11 +421,6 @@ p {
   border-radius: var(--radius-full);
   text-decoration: none;
   transition: background-color 0.25s ease, transform 0.25s ease;
-}
-
-.btn-wa:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
 }
 
 /* ==================== FOOTER ==================== */
@@ -522,10 +445,6 @@ p {
     font-size: 85%;
   }
 
-  .header {
-    padding: 1.25rem 5%;
-  }
-
   section {
     padding: var(--space-lg) 5%;
   }
@@ -536,41 +455,15 @@ p {
 }
 
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    padding: 1rem 5%;
-    gap: 0.75rem;
-  }
-
-  .menu-icon {
-    display: none;
-  }
-
-  .navbar {
-    position: static;
-    display: block;
-    padding: 0;
-    background: transparent;
-    border-bottom: none;
-  }
-
-  .navbar ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .navbar a {
-    font-size: 0.95rem;
-    padding: 0.25rem 0.75rem;
-  }
-
   .home {
     flex-direction: column;
     text-align: center;
     padding-top: 4rem;
     gap: 2rem;
+  }
+
+  .home-btn {
+    align-items: center;
   }
 
   .home-content h1 {
@@ -608,17 +501,5 @@ p {
 @media (max-width: 450px) {
   html {
     font-size: 75%;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

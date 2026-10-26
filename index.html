@@ -11,18 +11,7 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo">Farel Eka</div>
-    <i class="fa-solid fa-bars menu-icon" id="menu-icon" aria-label="Menu navigasi"></i>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#project">Project</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+
 
   <!-- Home -->
   <section class="home" id="home">
@@ -43,6 +32,8 @@
 
       <div class="home-btn">
         <a href="#about">About Me</a>
+        <a href="#project" class="btn-pill">My Project</a>
+        <a href="#contact" class="btn-pill">Contact Me</a>
       </div>
     </div>
   </section>
@@ -58,7 +49,7 @@
         <img src="gambar/rust.png" alt="" />
       </div>
       <div class="about-content">
-        <h1><i class="fa-solid fa-layer-group"></i> rust language programming enthusiast</h1>
+        <h1>rust language programming enthusiast</h1>
         <p>
           Saya sedang mendalami bahasa pemrograman rust, saya tertarik karena memory managemennya yang sangat kuat
         </p>
@@ -70,7 +61,7 @@
         <img src="gambar/backend.jpg" alt="" />
       </div>
       <div class="about-content">
-        <h1><i class="fa-solid fa-database"></i> Back End Developer</h1>
+        <h1>Back End Developer</h1>
         <p>
           Saya sebagai Back End Developer pemula. Pada bidang ini saya suka
           membuat sever dan membuat database
@@ -83,7 +74,7 @@
         <img src="gambar/devops.jpg" alt="" />
       </div>
       <div class="about-content">
-        <h1><i class="fa-solid fa-code"></i> DevOps Enggineer</h1>
+        <h1>DevOps Enggineer</h1>
         <p>
           Saya sedang mempelajari untuk membuat atau memodifikasi sebuah server,
           dan juga saya sangat menyukai memodifikasi sebuah software hingga sistem operasi
@@ -97,7 +88,7 @@
         <img src="gambar/machine_learning.jpg" alt="" />
       </div>
       <div class="about-content">
-        <h1><i class="fa-solid fa-database"></i> Machine Learning</h1>
+        <h1>Machine Learning</h1>
         <p>
           Di era pemrograman zaman sekarang, Ai sedang marak maraknya,
           saya berfikir, kenapa tidak membuat ai sendiri dari awal dengan metode Transformer
@@ -113,7 +104,7 @@
 
     <div class="project-grid">
 
-      <a href="" class="project-card">
+      <div class="project-card">
         <div class="project-image">
           <img src="gambar/iced.png" alt="" />
         </div>
@@ -121,7 +112,7 @@
           <h3>Chat box</h3>
           <p>Chatbox menggunakan teknologi LLM dan Ollama berbasis bahasa pemrograman rust </p>
         </div>
-      </a>
+      </div>
     </div>
   </section>
 
@@ -129,7 +120,6 @@
   <section class="contact" id="contact">
     <div class="contact-title">
       <h1>Contact Me</h1>
-      <p>Tertarik berdiskusi atau berkolaborasi? Kirimkan pesan melalui formulir di bawah ini.</p>
     </div>
 
     <form class="contact-form" action="#" method="post">
